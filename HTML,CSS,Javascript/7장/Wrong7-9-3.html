@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>book 객체 만들기</title>
+</head>
+<body>
+<h3>book 객체 만들기</h3>
+<hr>
+<script type="text/javascript">
+// (3) book 객체 만들기
+function x() {
+	this.title = "HTML5";
+	this.author = "황기태";
+	this.price = 20000;
+}
+// book 객체 생성
+let book = new x();
+
+document.write("book : ");
+document.write(book.title + ", ");
+document.write(book.author + ", ");
+document.write(book.price + "<br>");
+</script>
+</body>
+</html>

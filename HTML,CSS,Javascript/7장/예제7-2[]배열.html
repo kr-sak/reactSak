@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>[]로 배열 만들기</title>
+</head>
+<body>
+	<h3>[]로 배열 만들기</h3>
+	<hr>
+	<script>
+		let plot = [20, 5, 8, 15, 20];
+		document.write("let plot = [20, 5, 8, 15, 20]<br>");
+
+		for(let i=0; i<5; i++) {//for문을 이용해서 반복문으로 데이터 처리
+			let size = plot[i]; // plot 배열의 i번째 원소
+		    while(size>0) { //size가 0인 true값을 5원소 계산을 *로 표현
+		    	document.write("*");
+		    	size--; // 이건 *의 갯수를 나타내기 위한것 20~1까지의 별 5~1까지의 별의 갯수 이런식 size 값이 0이하가 되면 멈춤 증감식 필수
+		    }
+		    document.write(plot[i] + "<br>");
+		}    
+	</script>
+</body>
+</html>

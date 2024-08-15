@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>이미지 커서 만들기</title>
+		<style>
+			div {
+				display: inline-block;
+				position: absolute;
+			}
+			div > img {
+				width: 30px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>이미지 커서 만들기</h2>
+		<hr />
+		마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다.
+		<div id="div">
+			<img src="media/Koala.png" alt="NONE" onmousemove="where(event)" />
+			<script>
+				document.onmouseover = function where(e) {
+					let div = document.querySelector("div");
+					div.style.left = e.x + "px";
+					div.style.top = e.y + "px";
+				};
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM 객체 동적 삽입</title>
+	<script type="text/javascript">
+		function addAnswer(obj, text) {
+			let y = document.getElementsByClassName("firstP")
+			let x = document.createElement("p");
+			x.innerHTML = text;
+			let parent = obj.parentElement; // obj의 부모객체 
+			parent.appendChild(x);  //윗줄 없애고 obj.parentElement.appendChild(x)가능
+			x.setAttribute("class", "firstP")
+			x.addEventListener("click",
+			function () {
+				let z = this.parentElement;
+				z.removeChild(this);
+			})
+        }
+
+		/* 이것은 답보기에서 정답이 나옴
+		function addAnswer(obj, text) {
+			let y = document.getElementsByClassName("firstP")
+			let x = document.createElement("p");
+			x.innerHTML = text;
+			obj.appendChild(x);
+			x.setAttribute("class", "99");
+		}
+
+
+	   /*	function addAnswer(obj, text) {
+			let x = document.getElementsByClassName("firstP")
+			for(let i=0; i<x.length i++) {
+				let sub = x[i];
+				sub.innerHTML = addAnswer(obj, text);
+			}
+			firstP.appendChild(sub);
+		}  내 답*/
+
+
+	</script>
+</head>
+<body>
+	<h3>정답의 동적 삽입</h3>
+	<hr>
+	<div>
+		<p class="firstP">Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+		<button onclick="addAnswer(this, '백설공주')">답보기</button>
+	</div>
+	<div>
+		<p class="firstP">Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+		<button onclick="addAnswer(this, '둘 다')">답보기</button>
+	</div>
+</body>
+</html>

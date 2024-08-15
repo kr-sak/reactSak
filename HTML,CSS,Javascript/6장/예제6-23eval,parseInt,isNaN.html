@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>자바스크립트 전역함수</title>
+	<script>
+		function evalParseIntIsNaN() {
+			let res = eval("2*3+4*6"); // res는 30
+			document.write("eval(\"2*3+4*6\")는 " + res + "<br>");
+			let res2 = parseInt("32");// res2는 10진법으로 32
+			document.write("parseInt(\"32\")는 " + res2 + "<br>");
+			let res3 = parseInt("0x32");// res3은 32를 16진법으로 10진법으로 변환하여 리턴 50
+			document.write("parseInt(\"0x32\")는 " + res + "<br><br>");
+
+			n = parseInt("hello");
+			if(isNaN(n))
+				document.write("hello는 숫자가 아닙니다.");
+		}
+	</script>
+</head>
+<body>
+	<h3>eval(), parseInt(), isNaN()</h3>
+	<hr>
+	<script>
+		evalParseIntIsNaN();
+	</script>
+</body>
+</html>

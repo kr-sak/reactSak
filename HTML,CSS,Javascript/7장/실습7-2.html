@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>정수 5개 입력받아 역순으로 출력</title>
+</head>
+<body>
+	<h3>정수 5개 입력받아 역순으로 출력</h3>
+	<hr>
+	<script>
+		let x = new Array(5);
+		for(let i=0; i<x.length; i++) {
+			x[i]=prompt("정수 입력", "0");
+		}
+		document.write("입력된 수의 배열<br>");
+		for(let i=0; i<x.length; i++) {
+			document.write(x[i]+" ");
+		}
+		x.reverse();
+		document.write("<br>역순으로 재정렬된 배열<br>");
+		for(let i=0; i<x.length; i++) {
+			document.write(x[i] + " ");
+		}// 총평 아예 손도 못댐
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>document.write()</title>
+	<style>
+		script table { border: 1px solid black; }
+	</style>
+</head>
+<body>
+	<script>
+		document.write("document.write()로 표 만들기");
+		document.write("<hr>");
+		document.write("<table border='1';>");
+		document.write("<tr>")
+		document.write("<th>");
+		document.write("n");
+		document.write("</th>");
+
+
+		for(let x=0; x<10; x++) {
+			document.write("<td>")
+			document.write(x)
+			document.write("</td>")
+		}
+		document.write("</tr>");
+
+		document.write("<tr>");
+		document.write("<th>");
+		document.write("n<sup>2</sup>");
+		document.write("</th>");
+
+        for(let y=0; y<10; y++) {
+        	document.write("<td>")
+        	document.write(y*y)
+        	document.write("</td>")
+
+        }
+		document.write("</tr>");
+		document.write("</table>");
+	</script>
+</body>
+</html>

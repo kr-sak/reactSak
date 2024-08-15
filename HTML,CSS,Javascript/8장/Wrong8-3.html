@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>visibility 프로퍼티</title>
+	<script type="text/javascript">
+		function CHANGE() {
+			let x = document.getElementsByTagName("span");
+			for(let i=0; i<x.length; i++) {
+			let y = x[i]; // 여기까지 그리고 숨기기 까지는 성공 나머지는 배운 적 없음 if else 문까지는 잘 생각 했다.
+			let style = window.getComputedStyle(y); 
+			let xy = style.getPropertyValue("visibility");
+			if(xy == "hidden")
+				y.style.visibility = "visible";
+			else
+				y.style.visibility = "hidden";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>
+	다음 빈 곳에 숨은 단어?
+	<button id="SH" onclick="CHANGE()">show/hide</button>
+    </h3>
+	<hr>
+	<ul>
+		<li>i (<span>love</span>) you</li>
+		<li>CSS is Cascading (<span>style</span>) Sheet</li>
+		<li>응답하라 (<span>i988</span>)</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>마우스 클릭 연습</title>
+		<style>
+			table {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			td,
+			th {
+				border: 1px solid black;
+			}
+			img {
+				width: 50px;
+				height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>마우스 클릭 연습</h3>
+		<hr />
+		<table id="gameBoard"></table>
+		<script>
+			let select = 0;
+			let start_flag = 0;
+			//동적으로 게임판 생성
+			let gameBoard = document.getElementById("gameBoard");
+			for (let i = 0; i < 10; i++) {
+				let newTr = document.createElement("tr");
+				for (let j = 0; j < 10; j++) {
+					let newTd = document.createElement("td");
+					let newImg = document.createElement("img");
+					newImg.setAttribute("src", "./media/white.png");
+					newImg.addEventListener("click", move);
+					newTd.appendChild(newImg);
+					newTr.appendChild(newTd);
+				}
+				gameBoard.appendChild(newTr);
+			}
+			function move() {
+				document.images[select].src = "./media/white.png";
+				select = Math.floor(Math.random() * 100);
+				document.images[select].src = "./media/puppy.png";
+			}
+			move();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>book 객체 배열 만들기</title>
+</head>
+<body>
+	<h3>book 객체 배열 만들기</h3>
+	<hr>
+	<script type="text/javascript">
+		let bookArray = new Array();
+		function putArray(data, i) { // 사용자 가 책 프로토타입 객체 만
+			let s = data.split(",");
+			let book = new Object();
+			book.title = s[0];
+			book.author = s[1];
+			book.price = parseInt(s[2]);
+			bookArray[i] = book;
+			document.write(s[0] + ", " + s[1] + ", " + s[2] + "<br>");
+		}
+		// 펑션으로 비싼 값 찾기
+		function expensive() {
+			let exp = new Object();
+			exp.price = 0;
+			for(let i=0; i<5; i++) {
+				if(exp.price < bookArray[i].price)
+					exp = bookArray[i];
+			}
+			return exp;
+		}
+		// 프롬프트 값 제시 및 data 값 입력
+		for(let i=0; i<5; i++) {
+			let data = prompt("콤마로 분리하면서 책 제목, 저자, 가격 순으로 입력");
+			putArray(data, i);
+		}
+		// 비싼 가격 출력
+		document.write("<hr>");
+		let exp = expensive();
+		document.write("가장 가격이 비싼 책은 " + exp.title);
+	</script>
+</body>
+</html>

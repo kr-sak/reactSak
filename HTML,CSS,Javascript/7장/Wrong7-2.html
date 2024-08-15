@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>정수 5개 입력받아 역순으로 출력</title>
+</head>
+<body>
+	<h3>정수 5개 입력받아 역순으로 출력</h3>
+	<hr>
+	<script type="text/javascript">
+		let x = new Array(5); // 배열 5개 정해주고
+		for(let i=0; i<5; i++) { // 위와 같음
+			x[i] = prompt("정수입력", "0"); // 숫자 5개를 입력하고
+		}
+		    let big = n[0];
+		for(let i=1; i<5; i++) {
+		    if(x[i] > big)
+		       big = x[i];
+		}
+		document.write("제일 큰 수는 " + big);
+		document.write("입력된 수의 배열<br>"); // 입력한 수 배열
+		for(let i=0; i<x.length; i++) { // x의 배열의 인덱스 수 만큼 출력
+			document.write(x[i] + " "); // x입력 출력
+		}
+		document.write("<hr>");
+
+	
+	</script>
+</body>
+</html>

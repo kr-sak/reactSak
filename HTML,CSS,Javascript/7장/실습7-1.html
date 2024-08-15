@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>난수</title>
+</head>
+<body>
+	<h3>난수 10개 생성</h3>
+	<hr>
+	<script>
+		let n = []; // 배열 n 선언
+		for (let i=0; i<10; i++) { // 난수 10개 배열에 저장
+		     let x = Math.random()*100+1;
+		     n[i] = Math.floor(x);
+ 		}
+		for (let i=0; i<10; i++) // 배열 출력
+			document.write(n[i] + " ");
+
+		document.write("<hr>");
+		let big = n[0]; // big 제일 큰 수 저장
+		for(let i=0; i<10; i++) { 
+		    if(n[i]>big) // 가정값 n[i]는 big보다 클때 
+		    	big = n[i];
+		}
+		document.write("제일 큰 수는 " + big);
+		document.write("<hr>");
+		n.sort(); //배열 정렬
+		for(let i=0; i<10; i++) // 배열 출력
+			document.write(n[i] + " ");
+		// 총평 전체적인 틀은 나쁘지 않았음 그러나 가정값을 생각하였으나 그안에 식값을 생각못함
+	</script>
+</body>
+</html>

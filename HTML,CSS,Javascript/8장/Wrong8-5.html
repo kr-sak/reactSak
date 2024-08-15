@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>z-index 프로퍼티</title>
+	<style>
+		div { position: absolute; }
+		img { position: absolute; }
+	</style>
+
+</head>
+<body>
+	<h3>z-index 프로퍼티</h3>
+	<hr>
+	<div onclick="CHANGE()">
+	<img src="media/spade-A.png" id="spadeA" width="100" height="140" alt="스페이드A">
+	<img src="media/spade-2.png" id="spade2" width="100" height="140" alt="스페이드2">
+	<img src="media/spade-3.png" id="spade3" width="100" height="140" alt="스페이드3">
+	<img src="media/spade-7.png" id="spade7" width="100" height="140" alt="스페이드7">
+    </div>
+    	<script type="text/javascript">
+			let x = document.getElementsByTagName("img");
+			for(let i=0; i<x.length; i++) {
+				let y = x[i];
+				y.style.zIndex=i;
+				y.style.left = "10px";
+				y.style.top = "20px";
+
+				y.onclick = shuffle; 
+			}
+			function shuffle() {
+				for(let i=0; i<x.length; i++) {
+					let y = x[i];
+					y.style.zIndex++;
+					y.style.zIndex %= x.length;
+				}
+			} // 제일 까다로움 fuction을 쓰는게 shuffle 할 때 써야함 처음에는 카드를 뭉쳐두는 코드를 짜고나서 function으로 하나씩 zindex 수를 늘려감에 따라 써야함
+	</script>
+</body>
+</html>

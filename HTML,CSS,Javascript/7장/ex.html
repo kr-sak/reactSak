@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>123</title>
+</head>
+<body>
+	<script>
+		function fill() { this.amount += 2; }
+		function consume() { this.amount -= 4; }
+
+		let box = new Object();
+		box.color = "red";
+		box.size = 10;
+		box.amount = 0;
+		box.fill = fill;
+		box.consume = consume;
+
+		box.fill();
+		document.write(box.amount + "<br>"); // amount = 2
+		box.consume();
+		document.write(box.amount); // 이어서 amount값이 2로 저장 됐다 따라서 2 - 2 = 0이다
+		// 그래서 각각의 숫자는 2,0으로 출력
+	</script>
+</body>
+</html>

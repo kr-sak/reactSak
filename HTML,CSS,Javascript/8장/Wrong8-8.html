@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>transformscale</title>
+	<script type="text/javascript">
+		let n = 2;
+		function CHANGE() {
+			let x = document.getElementById("SP");
+			x.style.transform = "scaleX("+ n + ")";
+			n = n+1;
+		}
+	</script>
+</head>
+<body>
+	<h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+	<hr>
+	<img src="media/spongebob.png" id="SP" onclick="CHANGE()" alt="animation" width="100" height="100">
+</body>
+</html>

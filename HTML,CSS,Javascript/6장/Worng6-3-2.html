@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>document.write()로 표만들기</title>
+</head>
+<body>
+	<h3>document.write()로 표만들기</h3>
+	<hr>
+	<script>
+		document.write("<table border=1;>"); // table태그 자바스크립트로 생성 스타일 먹이기 생각못함  
+		document.write("<tr>"); //  1행
+		document.write("<th>n</th>"); // 1행 제목 
+		for(let x=0; x<10; x++) { // 1행의 숫자를 알고 있으니 for문으로 표현 전역변수 0~9 
+			document.write("<td>" + x + "</td>"); // 각각의 칸에 들어갈 숫자 지정 
+		}
+		document.write("</tr>");
+
+
+		document.write("<tr>");
+		document.write("<th>n<sup>2</sup></th>"); // 반복
+		for(let y=0; y<10; y++) {
+			document.write("<td>" + y*y + "</td>");
+		}
+		document.write("/<tr>");
+		document.write("</table>"); // 총평 : 어렵지는 않은편 그러나 생각을 못하고 일일히 만들려고 함
+	</script>
+</body>
+</html>

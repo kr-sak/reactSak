@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>6-4</title>
+</head>
+<body>
+	<h3>월화수목금토일</h3>
+	<hr>
+	<script>
+		let x = 0; //예시 1 
+		let y = prompt("월화수목금토일 중에서 입력하세요.", "")
+		switch(y) {
+			case "월" :
+			case "화" :
+			case "수" :
+			case "목" : x = "출근"
+			break;
+			case "금" :
+			case "토" :
+			case "일" : x = "휴일"
+			break;
+			default :
+		}
+		document.write(y + "요일은" + x);
+	</script>
+	<script>
+		let work = prompt ("월화수목금토일 중에서 입력하세요", ""); // 예시 2
+		switch(work) {
+			case "월" : 
+			case "화" :
+			case "수" :
+			case "목" : document.write(work + "요일은 출근");
+			break;
+			case "금" :
+			case "토" :
+			case "일" : document.write(work + "요일은 휴일");
+			break;
+			default :
+			 document.write(work + "는 없는 단어입니다.");
+ 		} // 총평 : 만들기는 쉬운 편 그러나 처음부터 생각하지 못함.
+	</script>
+</body>
+</html>

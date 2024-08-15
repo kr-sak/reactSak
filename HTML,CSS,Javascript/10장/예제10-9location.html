@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>window.location으로 웹 사이트 접속</title>
+		<script>
+			function load() {
+				let select = document.getElementById("site");
+				window.location = select.value; // select.value와 같은 명령 실행
+			}
+		</script>
+	</head>
+	<body>
+		<h3>window.location으로 웹 사이트 접속</h3>
+		<hr />
+		사이트 선택 :
+		<select name="사이트" id="site">
+			<option value="http://www.naver.com">네이버</option>
+			<option value="http://www.google.com">구글</option>
+			<option value="http://www.twitch.tv">트위치</option>
+		</select>
+		<p></p>
+		<button onclick="load()">웹 사이트 접속</button>
+	</body>
+</html>

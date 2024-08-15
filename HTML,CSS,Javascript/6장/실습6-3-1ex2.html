@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>66</title>
+</head>
+<body>
+	<h3>변수선언, 전역/지역/블록 변수</h3>
+	<hr>
+
+	<script>
+		let x=1;
+		for(let i=0; i<5; i++) {
+			let y=""; // 값을 안준 이유는 값이없어야 별표가 나오기때문이다.
+			for(let j=0; j<x; j++) {
+				y = y + "*";
+			}
+			document.write(y + "<br>");
+			x += i;
+		}
+	</script>
+</body>
+</html>

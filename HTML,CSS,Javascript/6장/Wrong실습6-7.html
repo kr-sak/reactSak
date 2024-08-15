@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>6-7</title>
+</head>
+<body>
+	<h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+	<hr>
+	<script>
+		let x = prompt("숫자 입력", "0"); // 숫자 입력 프롬트
+		if(isFinite(x)) { //isFinite(x)는 x값이 숫자이면 true 리턴
+		let n = parseInt(x);// x값은 정수로 n 변수 선언
+		if(n>0) { // n이 0보다 크다면? 가정값
+			let least = n%10; // 최소가 정수 n을 10으로 나눈 나머지값 least 변수 선언
+			let most = 0; // 마찬가지로 most 변수 선언 
+			while(n != 0) { // while 반복문 시작 n이 0과 같지 않다면 
+				most = n%10; // most는 n을 10으로 나눈 나머지 값을 most
+				n = Math.floor(n/10); // n을 Math.floor으로 실수를 10으로 나누면 앞에 정수만 나오게하는 명령어 ex) 5775을 10으로나누면 577.5가 나온다 그러나 Math.floor로 뒤에 소수점은 사라지고 n=most=577이 된다. 이걸 if문인 n이 0에서 더 안나눠지는 5까지 간다.
+			}
+			if(most == least)
+				document.write(x + ": 같음"); // 여기서 if문으로 most 나올 말 설정
+		    else
+		    	document.write(x + ": 다름"); // else 로 아닐 시 추가
+		}
+		else
+			document.write(x + ": 음수나 0은 다루지 않습니다.");
+    } 
+    else {
+    	document.write(x + ": 숫자가 아닙니다.");
+    }
+	</script>
+</body>
+</html>

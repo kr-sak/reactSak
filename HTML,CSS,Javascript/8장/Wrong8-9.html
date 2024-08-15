@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>라면을 끓이는 순서</title>
+	<script type="text/javascript">
+		function CHANGE() {
+			let x = document.getElementById("na"); // ol 객체 찾는다.
+			let y = prompt("라면을 끓이는 순서를 입력하라") // 프롬트 입력창 생성
+			if(y == null || y == "") // 프롬트 창 입력기 생성창
+				return; // 결과값 돌출
+			let z = document.createElement("li"); // 리스트 생성
+			z.innerHTML = y; // 리스트 값이 y값다 같다.
+			na.appendChild(z); // na 즉 ol 태그에 붙는다.
+		} // 전부 틀림
+	</script>
+</head>
+<body>
+	<h3>라면을 끓이는 순서</h3>
+	<hr>
+	<ol id="na" type="A" style="background-color: yellowgreen;" onclick="CHANGE()">
+		<li>물을 끓인다.</li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>document.write()</title>
+</head>
+<body>
+	<script>
+		let x = 1;  //x라는 변수 선언. 
+		for (let i=0; i<5; i++) {  //for문을 이용한 반복, 변수 i는 0,1,2,3,4 총 5개 이므로 5번의 과정이 반복된다.
+			let y = ""; 
+			for (let j=0; j<x; j++) { // j라는 변수 선언 값은 아무런 값도 없다. 
+				y = y + "*"; // y는 기존 별갯수에서 하나씩 증가, 5회 까지 반복한다.
+			}
+			document.write(y + "<br>"); // 별 결과를 받고 줄넘어 반복하기위해 추가
+			x += 1;  // x에 1를 추가하여 얼마나 반복했는지 알기위해 
+		}
+	</script>
+</body>
+</html>

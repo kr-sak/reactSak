@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>this 활용</title>
+	<script type="text/javascript">
+		function CHANGE(obj, size, color) {
+			obj.style.fontSize = size;
+			obj.style.color = color;
+		}
+	</script>
+</head>
+<body>
+	<h3>this 활용</h3>
+	<hr>
+	<button onclick="CHANGE(this, '30px', 'red')">버튼</button>
+	<button onclick="CHANGE(this, '30px', 'blue')">버튼</button>
+	<div onclick="CHANGE(this, '25px', 'orange')">여기 클릭하면 크기와 색 변경</div>
+</body>
+</html>

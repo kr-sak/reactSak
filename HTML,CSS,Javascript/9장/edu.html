@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="button" onclick="alert(window.location)" value="alert(window.href)" /> <!-- 버튼을 클릭했을 '때'-->
+    <input type="button" onclick="window.open('bom.html')" value="window.open('bom.html')" /> <!-- 버튼을 클릭했을 '때'-->
+    <input type="text" onchange="alert(this.value)"> <!-- 텍스트 창에서 벗어날을 '때'-->
+
+    <!-- 인라인 방식은 이벤트 대상의 태그 속성으로 지정하는 것이다. -->
+
+    <!--자기 자신을 참조하는 불편한 방법-->
+<input type="button" id="target" onclick="alert('Hello world, '+document.getElementById('target').value);" value="button" />
+<!--this를 통해서 간편하게 참조할 수 있다-->
+<input type="button" onclick="alert('Hello world, '+this.value);" value="button" />
+<!-- 인라인 방식의 장점은 어떤 태그가 있을 때 해당하는 태그에 직접 기술되어있기 때문에 찾기쉽다-->
+<!-- 인라인 방식 단점은 자바스크립트 코드가 HTML태그에 속해 있어서 코드 자체가 읽기 안좋다.-->
+</body>
+</html>

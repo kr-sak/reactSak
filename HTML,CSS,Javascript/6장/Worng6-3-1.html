@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>66</title>
+</head>
+<body>
+	<h3>변수선언, 전역/지역/블록 변수</h3>
+	<hr>
+	<script>
+		for(let x=1; x<=5; x++) { // 예시 1 1~5까지 반복 전역변수
+			for(let y=0; y<x; y++) { // y가 0인 이유는 0~4까지 반복 결과를 포함 지역변수
+				document.write("*") // 숫자 대신 결과값이 별표로 출력
+			}
+			document.write("<br>"); 
+		}
+	</script> 
+	<script>
+		let x = 1; // 전역변수 선언 
+		for (let i=0; i<=5; i++) { // 예시2  지역변수 
+			let y = "" //아무것도 표시 안하므로서 별표 갯수만 나오게하기
+			for (let j=1; j<x; j++) { 
+				document.write("*") // y = y + "*" 와 동일한 효과 
+			}
+			document.write(y + "<br>"); 
+			x += 1; // x = x+1 와 동일
+		}
+	</script>
+</body>
+</html>

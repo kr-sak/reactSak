@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>book 객체 만들기</title>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body>
+<h3>book 객체 만들기</h3>
+<hr>
+<script type="text/javascript">
+let bookArray = [];
+function putArray(data, i) {
+	let input = prompt("콤마(,)로 분리하면서 책제목 저자 가격순으로 입력", "");
+	let ar = input.split(",");
+	let book = new Object();
+	book.title = ar[0];
+	book.author = ar[1];
+	book.price = parseInt(ar[2]);
+	bookArray[i] = book;
+	book
+}
+for(i=0; i<5; i++) {
+	document.write(bookArray[i].title + ",");
+	document.write(bookArray[i].author + ",");
+	document.write(bookArray[i].price + "<br>");
+}
+let most = bookArray[0]; // 이걸 쓰는게 아니다. 그럼 어떤 걸 써야하지? 숫자만 가능함 다른방법을 찾아야한다 콤마가 들어가는순간 전부쓸모없음
+for(let i=0; i<5; i++) { // 큰 값 찾기
+	if(bookArray[i] > most.price)
+	   most.price=bookArray.price;
+}
+document.write("<br>가장 가격이 비싼 책은" + most.title);
+</script>
+</body>
+</html>
